@@ -1,0 +1,40 @@
+------------------------------
+-- mux_quad_4to1
+------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity mux_quad_8to1 is
+   port( sel: in std_logic_vector(2 downto 0);
+         in0: in std_logic_vector(3 downto 0);
+         in1: in std_logic_vector(3 downto 0);
+         in2: in std_logic_vector(3 downto 0);
+         in3: in std_logic_vector(3 downto 0);
+         in4: in std_logic_vector(3 downto 0);
+         in5: in std_logic_vector(3 downto 0);
+         in6: in std_logic_vector(3 downto 0);
+         in7: in std_logic_vector(3 downto 0);
+         y: out std_logic_vector(3 downto 0)
+        ); 
+end mux_quad_8to1;
+
+architecture arch of mux_quad_8to1 is
+
+begin
+   process(sel,in0,in1,in2,in3,in4,in5,in6,in7)
+   begin 
+      case sel is
+           when "000"  => y <= in0; 
+           when "001"  => y <= in1;  -- 1
+           when "010"  => y <= in2;  -- 2
+           when "011"  => y <= in3;  -- 2
+           when "100"  => y <= in4; 
+           when "101"  => y <= in5;  -- 1
+           when "110"  => y <= in6;  -- 2
+           when others => y <= in7; -- 
+      end case;
+   end process;
+
+end architecture arch;

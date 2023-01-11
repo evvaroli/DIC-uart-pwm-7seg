@@ -1,0 +1,9 @@
+
+State Machine - |main|uart_rx:uartRx|state
+Name state.DATAREADY state.STOP state.SHIFT state.DELAY state.START state.MARK 
+state.MARK 0 0 0 0 0 0 
+state.START 0 0 0 0 1 1 
+state.DELAY 0 0 0 1 0 1 
+state.SHIFT 0 0 1 0 0 1 
+state.STOP 0 1 0 0 0 1 
+state.DATAREADY 1 0 0 0 0 1 

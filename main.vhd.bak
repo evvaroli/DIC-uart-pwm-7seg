@@ -1,0 +1,27 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+
+entity main is
+   port
+	   (
+		  a: in std_logic_vector (3 downto 0);
+		  b: in std_logic_vector (3 downto 0);
+		  clk50M: in std_logic;
+		  a_to_g: out std_logic_vector (7 downto 0);
+		  segments: out std_logic_vector (3 downto 0)
+		 );	
+end main
+
+
+architecture main of main is
+
+begin
+
+
+
+
+
+
+end main;

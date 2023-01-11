@@ -1,0 +1,185 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clkdiv:clkdiv1|q[0]'
+Slack : -3.309
+TNS   : -62.252
+
+Type  : Slow 1200mV 85C Model Setup 'clk50M'
+Slack : -2.767
+TNS   : -33.924
+
+Type  : Slow 1200mV 85C Model Setup 'clkdiv:clkdiv1|q[7]'
+Slack : -2.519
+TNS   : -31.803
+
+Type  : Slow 1200mV 85C Model Setup 'uart_rx:uartRx|rdrf'
+Slack : -0.453
+TNS   : -4.461
+
+Type  : Slow 1200mV 85C Model Setup 'clkdiv:clkdiv1|q[15]'
+Slack : -0.340
+TNS   : -0.353
+
+Type  : Slow 1200mV 85C Model Hold 'clkdiv:clkdiv1|q[0]'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clkdiv:clkdiv1|q[15]'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'uart_rx:uartRx|rdrf'
+Slack : 0.501
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clkdiv:clkdiv1|q[7]'
+Slack : 0.513
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk50M'
+Slack : 0.737
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk50M'
+Slack : -3.000
+TNS   : -26.792
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkdiv:clkdiv1|q[0]'
+Slack : -1.487
+TNS   : -46.097
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'uart_rx:uartRx|rdrf'
+Slack : -1.487
+TNS   : -23.792
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkdiv:clkdiv1|q[7]'
+Slack : -1.487
+TNS   : -19.331
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkdiv:clkdiv1|q[15]'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Slow 1200mV 0C Model Setup 'clkdiv:clkdiv1|q[0]'
+Slack : -3.114
+TNS   : -55.876
+
+Type  : Slow 1200mV 0C Model Setup 'clk50M'
+Slack : -2.426
+TNS   : -30.465
+
+Type  : Slow 1200mV 0C Model Setup 'clkdiv:clkdiv1|q[7]'
+Slack : -2.245
+TNS   : -28.291
+
+Type  : Slow 1200mV 0C Model Setup 'uart_rx:uartRx|rdrf'
+Slack : -0.348
+TNS   : -2.993
+
+Type  : Slow 1200mV 0C Model Setup 'clkdiv:clkdiv1|q[15]'
+Slack : -0.207
+TNS   : -0.207
+
+Type  : Slow 1200mV 0C Model Hold 'clkdiv:clkdiv1|q[0]'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clkdiv:clkdiv1|q[15]'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'uart_rx:uartRx|rdrf'
+Slack : 0.472
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clkdiv:clkdiv1|q[7]'
+Slack : 0.473
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk50M'
+Slack : 0.684
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk50M'
+Slack : -3.000
+TNS   : -26.792
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkdiv:clkdiv1|q[0]'
+Slack : -1.487
+TNS   : -46.097
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'uart_rx:uartRx|rdrf'
+Slack : -1.487
+TNS   : -23.792
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkdiv:clkdiv1|q[7]'
+Slack : -1.487
+TNS   : -19.331
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkdiv:clkdiv1|q[15]'
+Slack : -1.487
+TNS   : -4.461
+
+Type  : Fast 1200mV 0C Model Setup 'clk50M'
+Slack : -1.173
+TNS   : -13.801
+
+Type  : Fast 1200mV 0C Model Setup 'clkdiv:clkdiv1|q[0]'
+Slack : -0.941
+TNS   : -10.821
+
+Type  : Fast 1200mV 0C Model Setup 'clkdiv:clkdiv1|q[7]'
+Slack : -0.456
+TNS   : -5.546
+
+Type  : Fast 1200mV 0C Model Setup 'uart_rx:uartRx|rdrf'
+Slack : 0.367
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clkdiv:clkdiv1|q[15]'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clkdiv:clkdiv1|q[0]'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clkdiv:clkdiv1|q[15]'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'uart_rx:uartRx|rdrf'
+Slack : 0.195
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clkdiv:clkdiv1|q[7]'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk50M'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk50M'
+Slack : -3.000
+TNS   : -20.024
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkdiv:clkdiv1|q[0]'
+Slack : -1.000
+TNS   : -31.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'uart_rx:uartRx|rdrf'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkdiv:clkdiv1|q[7]'
+Slack : -1.000
+TNS   : -13.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkdiv:clkdiv1|q[15]'
+Slack : -1.000
+TNS   : -3.000
+
+------------------------------------------------------------

@@ -1,0 +1,117 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "a_to_g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "a_to_g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "a_to_g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "a_to_g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "a_to_g[4]",
+					"strict" : false
+				},
+				{
+					"name" : "a_to_g[5]",
+					"strict" : false
+				},
+				{
+					"name" : "a_to_g[6]",
+					"strict" : false
+				},
+				{
+					"name" : "segments[0]",
+					"strict" : false
+				},
+				{
+					"name" : "segments[1]",
+					"strict" : false
+				},
+				{
+					"name" : "segments[2]",
+					"strict" : false
+				},
+				{
+					"name" : "segments[3]",
+					"strict" : false
+				},
+				{
+					"name" : "segments[4]",
+					"strict" : false
+				},
+				{
+					"name" : "segments[5]",
+					"strict" : false
+				},
+				{
+					"name" : "segments[6]",
+					"strict" : false
+				},
+				{
+					"name" : "segments[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pwmOut",
+					"strict" : false
+				},
+				{
+					"name" : "a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "a[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "a[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "nClr",
+					"strict" : false
+				},
+				{
+					"name" : "RxD",
+					"strict" : false
+				},
+				{
+					"name" : "clk50M",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

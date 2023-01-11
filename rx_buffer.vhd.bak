@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity rx_buffer is port (
+    rdrf : in STD_LOGIC;
+    rx_data : out STD_LOGIC_VECTOR (7 downto 0);
+
+    data0 : out STD_LOGIC_VECTOR (7 downto 0);
+	 data1 : out STD_LOGIC_VECTOR (7 downto 0)
+); end  rx_buffer;
+
+
+
+architecture rx_buffer_arch of rx_buffer is
+
+begin
+
+end rx_buffer_arch;

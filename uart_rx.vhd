@@ -1,0 +1,96 @@
+ -- 
+ -- 
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+
+entity uart_rx is port (
+    RxD : in STD_LOGIC;
+    clk25MHz : in STD_LOGIC;  -- @25MHz clk
+    clr : in STD_LOGIC;
+
+    rdrf: out STD_LOGIC;  -- received data read flag, is set to 1 if rx_data has new data
+    FE : out STD_LOGIC;   -- Frame error flag, set to 1 of STOP bit is not 1
+    rx_data : out STD_LOGIC_VECTOR (7 downto 0)
+); end  uart_rx;
+
+
+
+architecture uart_rx_arch of uart_rx is
+
+    type state_type is (MARK, START, DELAY, SHIFT, STOP, DATAREADY); 
+    signal state: state_type;
+    signal rxbuff : STD_LOGIC_VECTOR (7 downto 0 ) ;
+    signal baud_count: STD_LOGIC_VECTOR (11 downto 0);
+    signal bitcount : STD_LOGIC_VECTOR (3 downto 0 ) ;
+	 
+    constant bit_time: STD_LOGIC_VECTOR(11 downto 0 ) := X"A28";       -- values are for baud_rate = 9600 @25MHz clk
+    constant half_bit_time: STD_LOGIC_VECTOR (11 downto 0) := X"514";  -- values are for baud_rate = 9600 @25MHz clk
+
+begin
+    uart2: process (clk25MHz, clr) begin
+        if clr = '1' then
+            state <= MARK;
+            rxbuff <= "00000000"; 
+            baud_count <= X"000"; 
+            bitcount <= "0000"; 
+            rdrf <= '0';
+            FE <= '0';
+        elsif (clk25MHz'event and clk25MHz = '1') then 
+	  
+				case state is
+					 when MARK =>
+						  rdrf <= '0';
+						  baud_count <= X"000"; 
+						  bitcount <= "0000";
+						  if RxD= '1' then
+								state <= MARK; 
+						  else
+						  FE  <= '0';
+							  state <= START; 
+						  end if;
+					 when START => -- check for START bit 
+						  if baud_count >= half_bit_time then
+								baud_count <= X"000"; 
+								state <= DELAY;
+						  else    
+								baud_count <= baud_count + 1; 
+								state <= START;
+						  end if;
+
+					 when DELAY =>
+						  if baud_count >= bit_time then 
+								baud_count <= X"000";
+								if bitcount < 8 then 
+									 state <= SHIFT;
+								else
+									 state <= STOP; 
+								end if;
+						  else
+								baud_count <= baud_count + 1; 
+								state <= DELAY;
+						  end if;
+					 when SHIFT => -- get next bit 
+						  rxbuff(7) <= RxD;
+						  rxbuff(6 downto 0) <= rxbuff(7 downto 1);
+						  bitcount <= bitcount + 1; 
+						  state <= DELAY;
+					 when STOP =>
+						  rdrf <= '1';
+						  if RxD= '0' then 
+								FE <= '1';
+						  else
+								FE <= '0'; 
+						  end if;
+						  state <= DATAREADY;
+					 when DATAREADY =>
+						  rdrf <= '0';
+						  state <= MARK;
+				end case; 
+        end if;
+    end process uart2;
+
+    rx_data <= rxbuff; 
+
+end uart_rx_arch;
